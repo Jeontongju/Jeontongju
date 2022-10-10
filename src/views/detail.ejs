@@ -13,16 +13,7 @@
   
 
    
-    <div id="title">
-        <h1>추천 전통주 찾기</h1>
-        <div>
-        <img src="../uploads/home.PNG" alt="mainImg" class="imgs">
-        </div>
-        <p>나에게 맞는 술을 찾아보세요</p>
-
-       
-        
-    </div>  
+   
  
   
     
@@ -48,8 +39,8 @@
             <p class="fresh">청량감 : <%= data.청량감 %></p>
             <p class="food">잘 어울리는 음식 : <%= data.잘어울리는음식 %></p>
             <p class="material">주원료 : <%= data.주원료 %></p>
-            <p class="img">이미지 : <%= data.이미지 %></p>
-
+            <p class="cop">제조사 : <%= data.제조사 %></p>
+            <img class="img" src="../uploads/images/<%= data.id %>.BMP" />
     </div>
     
     

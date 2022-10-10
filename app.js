@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const db = require('./src/db.js'); //함수 export로 가져옴
 
+const formidable = require('formidable'); // form 태그 데이터들을 가져오는 모듈
 
 const session = require('./src/auth/session.js');
 const passport = require('./src/auth/passport/local.js');

@@ -4,6 +4,7 @@ const User = require('../models/User.js');
 const Question = require('../models/Question.js');
 const Drink = require('../models/Drink.js');
 const Img = require('../models/Img.js');
+const Shop = require('../models/Shop.js')
 
 module.exports = () => {
     const router = express.Router();
@@ -143,7 +144,11 @@ module.exports = () => {
    // 8. 전국 전통주점 페이지
     router.get('/shop', async(req,res) => {
         try{
-            res.render('shop.ejs');
+            Shop.find(async(에러, 결과) => {  //post 문서의 모든 데이터를 출력
+            console.log(결과);
+            res.render('shop.ejs', { data : 결과 });    
+            //db에서 가져온 결과를 posts라는 이름으로 ejs에 넣음
+        });
         }catch(err){
             console.log(err);
         }
@@ -271,6 +276,9 @@ module.exports = () => {
             console.log(err);
         }
     })
+
+   
+  
 
     return router;
 }

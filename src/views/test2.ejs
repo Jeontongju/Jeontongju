@@ -107,7 +107,7 @@
     <div class="resultContent">
         <% for (var i = 0; i < posts.length ; i ++) { %>
             <h2 class="title"><a href="detail/<%= posts[i].id %>"><%= posts[i].전통주명 %></a></h2>
-            <p class="img"><%= posts[i].이미지 %></p>
+            <img class="img" src="../uploads/images/<%= posts[i].id %>.BMP" />
             
            
         <% } %> 

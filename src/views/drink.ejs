@@ -67,9 +67,9 @@
             <input type="text" name="answer11" id="content">
 
             <% for (var i = 0; i < posts.length ; i ++) { %>
-                <h2 class="title"><%= posts[i].전통주명 %></h2>
+                <h2 class="title"><%= posts[i].name %></h2>
                 <p class="img">
-                    <img src = <%= posts[i].이미지 %> ></p>
+                    <%= posts[i].img %> </p>
             <% } %> 
 
         </p>
