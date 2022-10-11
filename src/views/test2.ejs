@@ -87,10 +87,6 @@
     </h3>
   </div>
 
-
-
-
-
   </form>
 
   <div id="result">
@@ -104,18 +100,17 @@
     <div class="resultContent">
       <hr>
       <% for (var i=0; i < posts.length ; i ++) { %>
-        <h2 class="title">
-          <%= posts[i].전통주명 %>
-        </h2>
-        <p class="category">
-          주종 : <%= posts[i].주종 %>
-        </p>
-        <p class="food">
-          잘 어울리는 음식 : <%= posts[i].잘어울리는음식 %>
-        </p>
-        <hr>
-        <!--<button class="detail" onclick="location.href='/detail/:id' ">상세보기</button>-->
-        <% } %> 
+          <h2 class="title"><a href="detail/<%= posts[i].id %>">
+              <%= posts[i].전통주명 %>
+            </a></h2>
+          <p class="category">
+            주종 : <%= posts[i].주종 %>
+          </p>
+          <p class = "food">
+            잘 어울리는 음식 : <%= posts[i].잘어울리는음식 %>
+          </p>
+      <hr>    
+          <% } %>
     </div>
 
 

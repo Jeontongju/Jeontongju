@@ -258,12 +258,12 @@ module.exports = () => {
   });
 
   // 10. 술 업로드 페이지
-  router.get("/detail/:id", async (req, res) => {
+  router.get("/drinks/detail/:id", async (req, res) => {
     try {
-      Drink.findOne({ _id: req.user._id }, function (에러, 결과) {
+      Drink.findOne({id: parseInt(req.params.id)} , function (에러, 결과) {
         //post 문서의 모든 데이터를 출력
         console.log(결과);
-        res.render("detail.ejs", { posts: 결과 });
+        res.render("detail.ejs", { data: 결과 });
         //db에서 가져온 결과를 posts라는 이름으로 ejs에 넣음
       });
     } catch (err) {
