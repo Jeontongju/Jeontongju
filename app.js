@@ -2,7 +2,9 @@
 const express = require('express');
 const app = express();
 const db = require('./src/db.js'); //함수 export로 가져옴
-const path = require("path");
+const path = require('path');
+
+const formidable = require('formidable'); // form 태그 데이터들을 가져오는 모듈
 
 const session = require('./src/auth/session.js');
 const passport = require('./src/auth/passport/local.js');
@@ -23,10 +25,10 @@ app.use(express.static( './src' ));
 session(app); //session함수 호출! 
 passport(app);
 
+
+app.use("/uploads", express.static("uploads"));
 app.use('/api/auth', authRouter(passport(app)));
 app.use('/', indexRouter()); // /로 들어오는 모든 경로는 indexRouter가 처리함.
-
-
 
 
 

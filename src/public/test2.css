@@ -29,12 +29,7 @@
   #result{
     
   }
-#title{
-  text-align: center;
-}
-.resultContent{
-  text-align: center;
-}
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
