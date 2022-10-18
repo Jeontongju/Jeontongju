@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+
 // 질문 리스트 받아와서 표시하는 컴포넌트
 function Recommendation(props){
-    const usertest = []; // 사용자 점수 받아놓는 리스트
     return (
         <div>
             <head>

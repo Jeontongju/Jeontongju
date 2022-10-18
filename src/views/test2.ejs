@@ -24,7 +24,7 @@
         
         <h1 id="q">
             <h1>전통주 찾기</h1>
-            <form action="/drinks/recommendation" method="get">
+            <form action="/drinks/test" method="get">
             <div>
                 가격
                 <select name="q1" id="q1">
@@ -101,7 +101,7 @@
     </div>
     <div class="resultContent">
         <% for (var i = 0; i < posts.length ; i ++) { %>
-            <h2 class="title"><a href="detail/<%= posts[i].id %>"><%= posts[i].전통주명 %></a></h2>
+            <h2 class="title"><a href="list/<%= posts[i].id %>"><%= posts[i].전통주명 %></a></h2>
             <img class="img" src="../uploads/images/<%= posts[i].id %>.BMP" />
             
         <% } %> 
